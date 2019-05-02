@@ -4,4 +4,6 @@
     <string name="username">Identifiant</string>
     <string name="password">Mot De Passe</string>
     <string name="descLogo">Logo MaxiChat</string>
+    <string name="tchat">Conversation</string>
+    <string name="search">&#32;Rechercher&#8230;</string>
 </resources>
