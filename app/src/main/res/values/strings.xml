@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MaxiChat</string>
+    <string name="login">Connexion</string>
+    <string name="username">Identifiant</string>
+    <string name="password">Mot De Passe</string>
+    <string name="descLogo">Logo MaxiChat</string>
 </resources>
