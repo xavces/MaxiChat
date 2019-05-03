@@ -6,4 +6,8 @@
     <string name="descLogo">Logo MaxiChat</string>
     <string name="tchat">Conversation</string>
     <string name="search">&#32;Rechercher&#8230;</string>
+    <string name="nom_personne">Nom Personne</string>
+    <string name="last_message">Début du dernier message …</string>
+    <string name="avatar">Avatar</string>
+    <string name="add_group">Ajouter un groupe</string>
 </resources>
