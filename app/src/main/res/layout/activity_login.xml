@@ -17,7 +17,7 @@
             android:layout_width="191dp"
             android:layout_height="wrap_content"
             android:text="@string/login"
-            android:id="@+id/button"
+            android:id="@+id/buttonLogin"
             android:background="@drawable/border"
             android:textColor="@android:color/white" app:layout_constraintVertical_bias="0.459"/>
     <EditText
@@ -46,7 +46,7 @@
             android:id="@+id/editText"
             android:labelFor="@id/editText"
             android:layout_marginBottom="92dp"
-            app:layout_constraintBottom_toTopOf="@+id/button"/>
+            app:layout_constraintBottom_toTopOf="@+id/buttonLogin"/>
     <ImageView
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
