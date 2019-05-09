@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".LoginActivity"
+        android:background="@drawable/background">
+    <EditText
+            android:layout_width="334dp"
+            android:layout_height="48dp"
+            android:inputType="textPersonName"
+            android:text="Aa..."
+            android:ems="10"
+            android:textColor="#8C9291"
+            android:paddingLeft="15dp"
+            android:background="@drawable/round_corner"
+            tools:layout_editor_absoluteY="674dp" tools:layout_editor_absoluteX="64dp" android:id="@+id/editText3"
+    />
+    <ImageButton
+            android:layout_width="41dp"
+            android:layout_height="41dp" app:srcCompat="@drawable/paperclips_white"
+            android:background="@drawable/btn_file"
+            android:padding="5dp"
+            tools:layout_editor_absoluteY="674dp" tools:layout_editor_absoluteX="16dp" android:id="@+id/imageButton2"
+            android:scaleType="fitCenter"/>
+</android.support.constraint.ConstraintLayout>
