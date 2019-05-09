@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical" android:id="@+id/linearLayout_main">
+            <EditText
+                    android:layout_width="334dp"
+                    android:layout_height="47dp"
+                    android:inputType="textPersonName"
+                    android:text="Name"
+                    android:ems="10"
+                    tools:layout_editor_absoluteY="685dp" android:id="@+id/editText"
+                    tools:layout_editor_absoluteX="2dp"/>
+            <Button
+                    android:text="send"
+                    android:layout_width="64dp"
+                    android:layout_height="46dp" tools:layout_editor_absoluteY="685dp"
+                    tools:layout_editor_absoluteX="345dp" android:id="@+id/btnSendMessage"/>
+            <android.support.v7.widget.RecyclerView
+                    android:layout_width="395dp"
+                    android:layout_height="0dp" tools:layout_editor_absoluteY="8dp" tools:layout_editor_absoluteX="8dp"
+                    app:layout_constraintDimensionRatio="h,1:1"/>
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
