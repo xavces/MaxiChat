@@ -22,7 +22,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity : AppCompatActivity(), AnkoLogger {
 
-    private val url = "http://10.13.100.9:3000/"
+    private val url = "http://10.13.1.205:3000/"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
