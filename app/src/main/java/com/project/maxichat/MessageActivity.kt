@@ -149,7 +149,6 @@ class MessageActivity : AppCompatActivity(), AnkoLogger {
             }
         } else {
             Log.d("sendtest", "Pas de co internet")
-s
         }
     }
 
