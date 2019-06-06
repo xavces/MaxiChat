@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import com.project.maxichat.dto.MessageService
+import com.project.maxichat.routes.Message
+import kotlinx.android.synthetic.main.activity_message.*
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.info
 import retrofit2.Call
@@ -15,21 +17,17 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-
-import com.project.maxichat.routes.Message
-import kotlinx.android.synthetic.main.activity_message.*
 import java.net.ConnectException
 import java.util.*
 import kotlin.collections.ArrayList
 
 
-class MessageActivity: AppCompatActivity(), AnkoLogger {
+class MessageActivity : AppCompatActivity(), AnkoLogger {
 
-    private val url = "http://192.168.43.50:3000/"
-    internal var dataSource : MutableList<Message> = ArrayList()
+    private val url = getString(R.string.url_api)
+    internal var dataSource: MutableList<Message> = ArrayList()
 
-    //val profileName=intent.getStringExtra("Username")
-    val profileName="Roberto Carlos"
+    val profileName = getString(R.string.nom_personne)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,25 +53,26 @@ class MessageActivity: AppCompatActivity(), AnkoLogger {
     }
 
 
-    fun sendMessage(adapter: AdapterMessage){
+    fun sendMessage(adapter: AdapterMessage) {
         var cm = baseContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val networkInfo = cm.activeNetworkInfo
 
 
-        if(networkInfo != null && networkInfo.isConnected){
+        if (networkInfo != null && networkInfo.isConnected) {
 
-            Log.d("MainActivity", "Y'a internet")
+            Log.d("MainActivity", getString(R.string.connected))
             val retrofit = Retrofit.Builder()
                 .baseUrl(url)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
             val service = retrofit.create(MessageService::class.java)
 
-            val newMessage = editText3.getText().toString()
+            val newMessage = editText3.text.toString()
             val user_sender = profileName
             val dateTime = Date()
 
-            val newMessageFromService = Message(message = newMessage, username_sender = user_sender, created_at = dateTime)
+            val newMessageFromService =
+                Message(message = newMessage, username_sender = user_sender, created_at = dateTime)
             val createNewMessage = service.createMessage(newMessageFromService)
 
             createNewMessage.enqueue(object : Callback<Message> {
@@ -87,8 +86,9 @@ class MessageActivity: AppCompatActivity(), AnkoLogger {
                         //linearLayout_main.addView(tv_dynamic)
                     }
                 }
+
                 override fun onFailure(call: Call<Message>, t: Throwable) {
-                    Log.e("MainActiviy","error",t)
+                    Log.e("MainActiviy", "error", t)
                     error("KO")
                 }
             })
@@ -98,11 +98,11 @@ class MessageActivity: AppCompatActivity(), AnkoLogger {
         }
     }
 
-    fun getAllMessages(adapter: AdapterMessage){
+    fun getAllMessages(adapter: AdapterMessage) {
         var cm = baseContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
         val networkInfo = cm.activeNetworkInfo
 
-        if(networkInfo != null && networkInfo.isConnected){
+        if (networkInfo != null && networkInfo.isConnected) {
             try {
                 Handler().postDelayed({
                     getAllMessages(adapter)
@@ -149,7 +149,7 @@ class MessageActivity: AppCompatActivity(), AnkoLogger {
             }
         } else {
             Log.d("sendtest", "Pas de co internet")
-
+s
         }
     }
 

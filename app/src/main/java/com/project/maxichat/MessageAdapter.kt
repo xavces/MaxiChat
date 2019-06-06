@@ -1,6 +1,5 @@
 package com.project.maxichat
 
-import android.os.Parcelable
 import android.support.v7.util.DiffUtil
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -10,7 +9,8 @@ import android.widget.TextView
 import com.project.maxichat.routes.Message
 import com.project.maxichat.util.DiffUtilCallback
 
-class AdapterMessage(private val datasource: MutableList<Message>): RecyclerView.Adapter<AdapterMessage.MyViewHolder>() {
+class AdapterMessage(private val datasource: MutableList<Message>) :
+    RecyclerView.Adapter<AdapterMessage.MyViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView = LayoutInflater.from(parent.context)
             .inflate(R.layout.recycler_message, parent, false)
@@ -25,15 +25,15 @@ class AdapterMessage(private val datasource: MutableList<Message>): RecyclerView
         holder.my_text_view.text = datasource.get(position).message
     }
 
-    class MyViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
-        internal var my_text_view : TextView
+    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        internal var my_text_view: TextView
 
         init {
             my_text_view = itemView.findViewById(R.id.message) as TextView
         }
     }
 
-    fun insertItem(newList: List<Message>){
+    fun insertItem(newList: List<Message>) {
         val diffUtilCallback = DiffUtilCallback(datasource, newList)
         val diffResult = DiffUtil.calculateDiff(diffUtilCallback)
 
@@ -41,7 +41,7 @@ class AdapterMessage(private val datasource: MutableList<Message>): RecyclerView
         diffResult.dispatchUpdatesTo(this)
     }
 
-    fun updateItem(newList: List<Message>){
+    fun updateItem(newList: List<Message>) {
         val diffUtilCallback = DiffUtilCallback(datasource, newList)
         val diffResult = DiffUtil.calculateDiff(diffUtilCallback)
 

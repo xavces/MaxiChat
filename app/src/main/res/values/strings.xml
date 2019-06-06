@@ -10,4 +10,6 @@
     <string name="last_message">Début du dernier message …</string>
     <string name="avatar">Avatar</string>
     <string name="add_group">Ajouter un groupe</string>
+    <string name="url_api">http://192.168.43.50:3000/</string>
+    <string name="connected">Connexion effectué</string>
 </resources>
