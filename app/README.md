@@ -27,7 +27,6 @@ ou
 > ifconfig sous mac.
 
 Ensuite, il faudra modifié l'adresse IP du serveur dans les fichiers :
-* MainActivity.kt
 * MessageActivity.kt
 
 Une fois le serveur installé, il ne restera plus qu'à lancer l'application sur un émulateur ou un téléphone connécté au même réseau que l'API.
