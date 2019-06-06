@@ -5,88 +5,37 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity" android:background="@drawable/background">
 
-    <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                      android:orientation="vertical">
-            <Button
-                    android:text="GetAll"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/buttonOk"/>
-            <Button
-                    android:text="GetById(1)"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/buttonSecond" tools:layout_editor_absoluteY="0dp"
-                    tools:layout_editor_absoluteX="100dp"/>
-            <Button
-                    android:text="Delete(4)"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/buttonDelete" tools:layout_editor_absoluteY="0dp"
-                    tools:layout_editor_absoluteX="200dp"/>
-            <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:text="nom"
-                    android:ems="10"
-                    android:id="@+id/nom"/>
-            <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:text="prenom"
-                    android:ems="10"
-                    android:id="@+id/prenom"/>
-            <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
-                    android:ems="10"
-                    android:id="@+id/Email" tools:text="email"/>
-            <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword"
-                    android:ems="10"
-                    android:id="@+id/Pass" tools:text="pass"/>
-            <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword"
-                    android:ems="10"
-                    android:id="@+id/confPass" android:contentDescription="confirm pass"/>
-            <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:ems="10"
-                    android:id="@+id/Pseudo" android:contentDescription="confirm pass"/>
-            <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:ems="10"
-                    android:id="@+id/Tag" android:contentDescription="confirm pass"/>
-            <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:ems="10"
-                    android:id="@+id/Avatar" android:contentDescription="confirm pass"/>
-            <Button
-                    android:text="Create"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/buttonCreate" tools:layout_editor_absoluteY="0dp"
-                    tools:layout_editor_absoluteX="300dp"/>
-            <Button
-                    android:text="ChangePage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" android:id="@+id/btnChangePage" tools:layout_editor_absoluteY="0dp"
-                    tools:layout_editor_absoluteX="500dp"/>
-        </LinearLayout>
-    </ScrollView>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:textColor="@android:color/white"
+            android:id="@+id/editTest_username_login" android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp"
+            android:hint="Username"
+            android:textColorHint="@color/colorLightGrey" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
+    <TextView
+            android:text="Username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:textColor="@color/cardview_light_background"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/editTest_username_login"/>
+    <Button
+            android:text="Se connecter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_connecter" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/editTest_username_login"/>
 
 </android.support.constraint.ConstraintLayout>

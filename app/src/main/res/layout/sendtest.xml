@@ -8,8 +8,10 @@
         android:layout_height="match_parent">
 
 
-    <android.support.v7.widget.RecyclerView android:id="@+id/recycle_view"
-            android:layout_width="match_parent" android:layout_height="match_parent">
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
     </android.support.v7.widget.RecyclerView>
 
@@ -26,18 +28,16 @@
                 android:inputType="textPersonName"
                 android:text="Name"
                 android:ems="10"
-                tools:layout_editor_absoluteY="685dp" android:id="@+id/editText"
+                tools:layout_editor_absoluteY="685dp"
+                android:id="@+id/editText"
                 tools:layout_editor_absoluteX="2dp"/>
+
         <Button android:id="@+id/button_insert"
                 android:text="Insert data"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"/>
-        <Button android:id="@+id/button_update"
-                android:text="Update data"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"/>
+
     </LinearLayout>
 
 
