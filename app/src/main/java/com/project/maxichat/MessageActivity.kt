@@ -4,9 +4,6 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
-import android.util.JsonWriter
-import com.beust.klaxon.Klaxon
-import com.beust.klaxon.json
 
 class MessageActivity : AppCompatActivity() {
 
