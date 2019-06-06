@@ -6,14 +6,14 @@
 >
 
     <TextView
-            android:text="TextView"
+            android:text="@string/text_received"
             android:layout_marginRight="20dp"
             android:textAlignment="textEnd"
             android:textColor="@color/colorWhite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/time" android:layout_weight="1"/>
     <TextView
-            android:text="TextView"
+            android:text="@string/text_received_hour"
             android:background="@drawable/message_from"
             android:textColor="@color/colorWhite"
             android:layout_marginRight="5dp"

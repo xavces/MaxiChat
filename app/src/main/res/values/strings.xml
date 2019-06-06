@@ -12,4 +12,11 @@
     <string name="add_group">Ajouter un groupe</string>
     <string name="url_api">http://192.168.43.50:3000/</string>
     <string name="connected">Connexion effectué</string>
+    <string name="welcome">"Welcome to </string>
+    <string name="no_internet">Connexion internet indisponible.</string>
+    <string name="not_connected">Impossible de se connecter.</string>
+
+    <string name="insert_text">Aa...</string>
+    <string name="text_received">TextView</string>
+    <string name="text_received_hour">12:12:12</string>
 </resources>

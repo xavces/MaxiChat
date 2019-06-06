@@ -88,13 +88,12 @@ class MessageActivity : AppCompatActivity(), AnkoLogger {
                 }
 
                 override fun onFailure(call: Call<Message>, t: Throwable) {
-                    Log.e("MainActiviy", "error", t)
+                    Log.e("MessageActivity", "error", t)
                     error("KO")
                 }
             })
         } else {
-            Log.d("sendtest", "Pas de co internet")
-
+            Log.d("MessageActivity", R.string.no_internet.toString())
         }
     }
 
@@ -119,7 +118,6 @@ class MessageActivity : AppCompatActivity(), AnkoLogger {
                         override fun onResponse(call: Call<List<Message>>, response: Response<List<Message>>) {
                             val allCourse = response.body()
                             if (allCourse != null) {
-                                info("Tous les messages:")
                                 var compteur = 0
                                 val newData = ArrayList<Message>()
                                 for (c in allCourse) {
@@ -138,17 +136,17 @@ class MessageActivity : AppCompatActivity(), AnkoLogger {
                         }
 
                         override fun onFailure(call: Call<List<Message>>, t: Throwable) {
-                            Log.e("MainActiviy", "error", t)
+                            Log.e("MessageActivity", "error", t)
                             error("KO")
                         }
                     })
 
                 }, 10000)
             } catch (e: ConnectException) {
-                Log.e("sendTest", "Arrive pas a se co lel")
+                Log.e("MessageActivity", R.string.not_connected.toString())
             }
         } else {
-            Log.d("sendtest", "Pas de co internet")
+            Log.d("MessageActivity", R.string.no_internet.toString())
         }
     }
 

@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         recyclerView = findViewById(R.id.recyclerView)
         for (i in 1..20) {
-            dataset.add("Welcome to $i")
+            dataset.add((R.string.welcome + i).toString())
         }
         recyclerLayoutManager = LinearLayoutManager(this)
         recyclerView.setHasFixedSize(true)
