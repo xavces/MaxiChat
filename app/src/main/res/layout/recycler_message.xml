@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="5dp"
+>
+
+    <TextView
+            android:text="TextView"
+            android:background="@drawable/message_to"
+            android:textColor="@color/colorWhite"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/message" android:layout_weight="1"/>
+    <TextView
+            android:text="TextView"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/colorWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/time" android:layout_weight="1"/>
+</LinearLayout>

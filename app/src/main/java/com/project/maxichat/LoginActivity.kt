@@ -12,7 +12,7 @@ class LoginActivity : AppCompatActivity(), AnkoLogger {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val buttonLogin = findViewById<Button>(R.id.button)
-        buttonLogin.setOnClickListener { startActivity<MainActivity>() }
+        val buttonLogin = findViewById<Button>(R.id.buttonLogin)
+        buttonLogin.setOnClickListener { startActivity<MessageActivity>() }
     }
 }
